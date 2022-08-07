@@ -1,0 +1,11 @@
+General Guide
+
+-the planner has 9 am to 5pm displayed
+-red text will appear at the live hour 
+-the hours that passed the live hour will turn gray 
+-hour that has not passed will turn green
+-on the side of each hour there will be a save icon button 
+-save icon button will save it to the local storage
+    - regadless if the user refreshes the page the events are saved
+
+
