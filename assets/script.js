@@ -1,29 +1,9 @@
 var weekDay = moment().format("dddd MMM Do, YYYY");
 $("#currentDay").text(weekDay);
 
-function btnClicked(hour) {
-    var input = $("#input" + hour);
-    //console.log(typeof(input));
-
-saveToLS(input);
-}
-
-//cat is recieving the value of input
-function saveToLS(cat) {
-    var printInput = cat.val();
-    localStorage.setItem("event", printInput);
-}
-
-function displayEvent () {
-    var getEvent = localStorage.getItem("event");
-    //console.log(localStorage.getItem("event"));
-    $("#input9").text(getEvent);
-} 
-
-displayEvent ();
 
 //time
-function checkTime(xyz,generalHourID) {
+function checkTime() {
 const listOfTime = {
     background09: 9,
     background10: 10,
@@ -52,3 +32,25 @@ for (const key in listOfTime) {
 }
 }
 checkTime();
+
+$(".sizeBtn").on("click", function(event){
+    event.preventDefault();
+    var txt = $(this).parent().siblings(".col-10").children().val();
+    console.log(txt);
+    var time = $(this).parent().siblings(".col-1").text();
+    console.log(time);
+    localStorage.setItem(time, txt);
+})
+
+$("#input9").val(localStorage.getItem("9 am"));
+$("#input10").val(localStorage.getItem("10 am"));
+$("#input11").val(localStorage.getItem("11 am"));
+$("#input12").val(localStorage.getItem("12 pm"));
+$("#input13").val(localStorage.getItem("1 pm"));
+$("#input14").val(localStorage.getItem("2 pm"));
+$("#input15").val(localStorage.getItem("3 pm"));
+$("#input16").val(localStorage.getItem("4 pm"));
+$("#input17").val(localStorage.getItem("5 pm"));
+
+
+
