@@ -13,8 +13,15 @@ saveToLS(input);
 }
 
 //cat is recieving the value of input
-
 function saveToLS(cat) {
     var printInput = cat.val();
     localStorage.setItem("event", printInput);
 }
+
+function displayEvent () {
+    var getEvent = localStorage.getItem("event");
+    //console.log(localStorage.getItem("event"));
+    $("#input9").text(getEvent);
+} 
+
+displayEvent ();
