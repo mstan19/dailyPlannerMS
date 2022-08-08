@@ -16,4 +16,5 @@ This is what the website needs to look like after fixing the starter html and cs
 
 ## How to deploy the link application
 * Click on this link for deployed application
-* 
+* https://github.com/mstan19/dailyPlannerMS
+
